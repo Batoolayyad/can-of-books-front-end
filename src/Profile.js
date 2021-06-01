@@ -6,11 +6,11 @@ class Profile extends Component {
     const { user } = this.props.auth0;
     return (
       <>
-    <img src={user.picture} alt='' />
     <div>Hello {user.name}</div>
     <div>Email: {user.email}</div>
     </>
     );
   }
 }
+
 export default withAuth0(Profile);

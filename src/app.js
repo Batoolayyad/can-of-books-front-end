@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from './header';
-// import IsLoadingAndError from './IsLoadingAndError';
+import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './footer';
-import './login.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,12 +11,13 @@ import { withAuth0 } from '@auth0/auth0-react';
 import Profile from './Profile';
 import MyFavoriteBooks from './myFavoriteBooks';
 import Login from './login';
+
 class App extends React.Component {
+
+  
   render() {
     return(
       <>
-      <div className="body">
-
         <Router>
           {/* <IsLoadingAndError> */}
             <Header />
@@ -33,10 +33,9 @@ class App extends React.Component {
             <Footer />
           {/* </IsLoadingAndError> */}
         </Router>
-
-      </div>
       </>
     )
   }
 }
+
 export default withAuth0(App);
